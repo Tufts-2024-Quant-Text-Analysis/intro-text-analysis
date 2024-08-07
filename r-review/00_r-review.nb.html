@@ -1752,28 +1752,8 @@ display: none;
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-Notebook. When you execute code within the notebook, the results appear
-beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within
-the chunk or by placing your cursor inside it and pressing
-<em>Cmd+Shift+Enter</em>.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Cmd+Option+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
+<p>If you get lost, see especially <a href="https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf">An
+Introduction to R</a>.</p>
 <div id="data-types-in-r" class="section level2">
 <h2>Data types in R</h2>
 <div id="the-assignment-operator--" class="section level3">
@@ -1857,12 +1837,30 @@ other languages</li>
 <h3>Removing missing values</h3>
 <div id="complete.cases" class="section level4">
 <h4><code>complete.cases</code></h4>
-<!-- rnb-text-end -->
 </div>
+</div>
+<div id="the-pipe" class="section level3">
+<h3><code>|&gt;</code> (the pipe)</h3>
+<p>The pipe operator <code>|&gt;</code> that passes its left-hand side
+as the first argument to the its right-hand side. In other words
+<code>[1 2 3] |&gt; first()</code> is equivalent to
+<code>first([1 2 3])</code>.</p>
+<p>You can try it for yourself below.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9vIDwtIDA6OVxuXG5mb28gfD4gbGFzdCgpICMgc2hvdWxkIHJldHVybiB0aGUgaW50ZWdlciA5XG5gYGAifQ== -->
+<pre class="r"><code>foo &lt;- 0:9
+
+foo |&gt; last() # should return the integer 9</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDlcbiJ9 -->
+<pre><code>[1] 9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KcGxvdChjYXJzKQpgYGAKCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDbWQrT3B0aW9uK0kqLgoKV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDbWQrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4gCgpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuCgoKIyMgRGF0YSB0eXBlcyBpbiBSCgojIyMgVGhlIGFzc2lnbm1lbnQgb3BlcmF0b3IgKDwtKQoKLSBZb3UgbWlnaHQgdGhpbmsgaXQncyBsaWtlIG90aGVyIHByb2dyYW1taW5nIGxhbmd1YWdlcywgd2hlcmUgYD1gIG9yIGA6PWAgaXMgdGhlIGFzc2lnbm1lbnQgb3BlcmF0b3IuCi0gWW91J2QgYmUgd3JvbmcuCi0gUiB1c2VzIGA8LWAgdG8gaW5kaWNhdGUgYXNzaWdubWVudC4KCmBgYHtyfQoKYGBgCgojIyMgT2JqZWN0cwoKIyMjIFZlY3RvcnMgYW5kIGxpc3RzCgojIyMgTWF0cmljZXMKCiMjIyBGYWN0b3JzCgojIyMgRGF0YSBGcmFtZXMKCiMjIyBUaGUgYG5hbWVzYCBmdW5jdGlvbgoKIyMgUmVhZGluZyBpbnB1dAoKIyMjIGBmaWxlYAoKIyMjIGByZWFkTGluZXNgCgojIyMgYHJlYWQuY3N2YAoKIyMjIGB1cmxgCgojIyBTYXZpbmcgb3V0cHV0CgojIyMgYGRwdXRgIGFuZCBgZGdldGAKCiMjIyBgZHVtcGAgYW5kIGBzb3VyY2VgCgojIyBTdWJzZXR0aW5nCgojIyMgYFtdYAoKLSBBbHdheXMgcmV0dXJucyBhbiBvYmplY3Qgb2YgdGhlIHNhbWUgY2xhc3MgYXMgdGhlIG9yaWdpbmFsCgojIyMgYFtbXV1gCgotIEV4dHJhY3RzIGEgc2luZ2xlIGVsZW1lbnQgZnJvbSBhIGxpc3Qgb3IgZGF0YSBmcmFtZQoKIyMjIGAkYAoKLSBFeHRyYWN0cyBlbGVtZW50cyBieSBuYW1lIC0tLSBraW5kIG9mIGxpa2UgYC5gIGluIHNvbWUgb3RoZXIgbGFuZ3VhZ2VzCgojIyMgUmVtb3ZpbmcgbWlzc2luZyB2YWx1ZXMKCiMjIyMgYGNvbXBsZXRlLmNhc2VzYA==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKSWYgeW91IGdldCBsb3N0LCBzZWUgZXNwZWNpYWxseSBbQW4gSW50cm9kdWN0aW9uIHRvIFJdKGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL2RvYy9tYW51YWxzL3ItcmVsZWFzZS9SLWludHJvLnBkZikuCgojIyBEYXRhIHR5cGVzIGluIFIKCiMjIyBUaGUgYXNzaWdubWVudCBvcGVyYXRvciAoPC0pCgotIFlvdSBtaWdodCB0aGluayBpdCdzIGxpa2Ugb3RoZXIgcHJvZ3JhbW1pbmcgbGFuZ3VhZ2VzLCB3aGVyZSBgPWAgb3IgYDo9YCBpcyB0aGUgYXNzaWdubWVudCBvcGVyYXRvci4KLSBZb3UnZCBiZSB3cm9uZy4KLSBSIHVzZXMgYDwtYCB0byBpbmRpY2F0ZSBhc3NpZ25tZW50LgoKYGBge3J9CgpgYGAKCiMjIyBPYmplY3RzCgojIyMgVmVjdG9ycyBhbmQgbGlzdHMKCiMjIyBNYXRyaWNlcwoKIyMjIEZhY3RvcnMKCiMjIyBEYXRhIEZyYW1lcwoKIyMjIFRoZSBgbmFtZXNgIGZ1bmN0aW9uCgojIyBSZWFkaW5nIGlucHV0CgojIyMgYGZpbGVgCgojIyMgYHJlYWRMaW5lc2AKCiMjIyBgcmVhZC5jc3ZgCgojIyMgYHVybGAKCiMjIFNhdmluZyBvdXRwdXQKCiMjIyBgZHB1dGAgYW5kIGBkZ2V0YAoKIyMjIGBkdW1wYCBhbmQgYHNvdXJjZWAKCiMjIFN1YnNldHRpbmcKCiMjIyBgW11gCgotIEFsd2F5cyByZXR1cm5zIGFuIG9iamVjdCBvZiB0aGUgc2FtZSBjbGFzcyBhcyB0aGUgb3JpZ2luYWwKCiMjIyBgW1tdXWAKCi0gRXh0cmFjdHMgYSBzaW5nbGUgZWxlbWVudCBmcm9tIGEgbGlzdCBvciBkYXRhIGZyYW1lCgojIyMgYCRgCgotIEV4dHJhY3RzIGVsZW1lbnRzIGJ5IG5hbWUgLS0tIGtpbmQgb2YgbGlrZSBgLmAgaW4gc29tZSBvdGhlciBsYW5ndWFnZXMKCiMjIyBSZW1vdmluZyBtaXNzaW5nIHZhbHVlcwoKIyMjIyBgY29tcGxldGUuY2FzZXNgCgojIyMgYHw+YCAodGhlIHBpcGUpCgpUaGUgcGlwZSBvcGVyYXRvciBgfD5gIHRoYXQgcGFzc2VzIGl0cyBsZWZ0LWhhbmQgc2lkZSBhcyB0aGUgZmlyc3QgYXJndW1lbnQgdG8gdGhlIGl0cyByaWdodC1oYW5kIHNpZGUuIEluIG90aGVyIHdvcmRzIGBbMSAyIDNdIHw+IGZpcnN0KClgIGlzIGVxdWl2YWxlbnQgdG8gYGZpcnN0KFsxIDIgM10pYC4KCllvdSBjYW4gdHJ5IGl0IGZvciB5b3Vyc2VsZiBiZWxvdy4KCmBgYHtyfQpmb28gPC0gMDo5Cgpmb28gfD4gbGFzdCgpICMgc2hvdWxkIHJldHVybiB0aGUgaW50ZWdlciA5CmBgYA==</div>
 
 
 
