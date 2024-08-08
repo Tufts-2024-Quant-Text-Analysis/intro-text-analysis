@@ -6,16 +6,6 @@ bibliography: ../references.bib
 
 # Meeting 2
 
-## Overview
-
-1.  Resources
-2.  Catch up and review
-3.  Installing R packages
-4.  Downloading a corpus
-5.  Working with textual data
-6.  Building intuitions
-7.  Homework
-
 ## Resources
 
 - rperseus: https://ropensci.github.io/rperseus/index.html
@@ -202,7 +192,15 @@ And there we have it!
 
 "A **lexeme** is a lemma with a particular meaning attached to it.... The best way of conceptualizing a lexeme is as a subentry in a dictionary" [@Brezina2018 40].
 
-## Building intuitions
+We won't deal with lexemes so much today, but it's important to remember that we can further group our lemmata according to specific dictionary meanings.
+
+One challenge of working with lexemes is that, even with the advances of large language models like ChatGPT, there is no surefire way to annotate them automatically. We still need "human-in-the-loop" pipelines to catch errors and ambiguities. And keep in mind that even two humans might disagree on the lexeme for a particular word!
+
+### Word-type wrap-ups
+
+::: {.callout}
+Discuss: How can we use these different notions of "word" in our analysis of corpora? Why is it important to be precise about what kind of word(s) we're using?
+:::
 
 ## Homework
 

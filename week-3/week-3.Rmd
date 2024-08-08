@@ -1,0 +1,38 @@
+---
+title: "Quantitative Textual Analysis - Week 3"
+output: html_notebook
+---
+
+## Reporting: Different Kinds of Frequencies
+
+### Absolute ("raw") frequency
+
+### Relative ("normalized") frequency
+
+### Hapax legomena ("once-saids")
+
+### Zipf's Law
+
+## Dispersion
+
+### Range_2 (R)
+
+### Standard Deviation
+
+#### Sample standard deviation
+
+### Coefficient of Variation (CV)
+
+### Julliand's _D_
+
+### Deviation of Proportions (DP)
+
+## Average Reduced Frequency (ARF)
+
+## Lexical Diversity
+
+### Type/Token Ratio (TTR)
+
+### Standardized Type/Token Ratio (STTR)
+
+### Moving Average Type/Token Ratio (MATTR)
