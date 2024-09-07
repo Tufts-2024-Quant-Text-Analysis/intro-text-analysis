@@ -1,20 +1,13 @@
 Introduction to Quantitative Textual Analysis
 ------
 
-DH 0120 / CLS 181
-
-Tufts University
-
-Fall 2024
-
-M 6--9 p.m.
-
-Miner Hall 112
-
-Instructor: Charles Pletcher (@pletcher)
-
-TA: Zoë Spriggs (@zspriggs)
-
+DH 0120 / CLS 181\
+Tufts University\
+Fall 2024\
+M 6--9 p.m.\
+Miner Hall 112\
+Instructor: Charles Pletcher (@pletcher)\
+TA: Zoë Spriggs (@zspriggs)\
 Office hours: By appointment (https://cal.com/pletcher)
 
 ## Course Description
@@ -102,6 +95,7 @@ This bibliography will grow over the course of the semester as we add articles f
 - Berti, Monica, ed. 2019. _Digital Classical Philology: Ancient Greek and Latin in the Digital Revolution_. De Gruyter. https://doi.org/10.1515/9783110599572-201.
 - Brezina, Vaclav. 2018. _Statistics in Corpus Linguistics: A Practical Guide_. 1st ed. Cambridge: Cambridge University Press. https://doi.org/10.1017/9781316410899.
 - Dobson, James E. 2022. “Vector Hermeneutics: On the Interpretation of Vector Space Models of Text.” Digital Scholarship in the Humanities 37 (1): 81–93. https://doi.org/10.1093/llc/fqab079.
+- Ehrett, Carl, Lucian Ghita, Dillon Ranwala, and Alison Menezes. 2024. “Shakespeare Machine: New AI-Based Technologies for Textual Analysis.” Digital Scholarship in the Humanities 39 (2): 522–31. https://doi.org/10.1093/llc/fqae021.
 - Fleming, Paul. 2017. “Tragedy, for Example: Distant Reading and Exemplary Reading (Moretti).” New Literary History 48 (3): 437–55. https://doi.org/10.1353/nlh.2017.0021.
 - Hanks, Patrick. 2013. _Lexical Analysis: Norms and Exploitations_. Cambridge: The MIT Press.
 - Herrmann, J Berenike. 2023. “Tool Criticism in Practice. On Methods, Tools and Aims of Computational Literary Studies.” Digital Humanities Quarterly 17 (2).

@@ -1,11 +1,11 @@
 Introduction to Quantitative Textual Analysis
 ------
 
-Instructor: Charles Pletcher (@pletcher)
-TA: Zoë Spriggs
-Meeting time: M 6-9 p.m.
-Location: Miner Hall 112
-Office hours: By appointment
+Instructor: Charles Pletcher (@pletcher)\
+TA: Zoë Spriggs\
+Meeting time: M 6-9 p.m.\
+Location: Miner Hall 112\
+Office hours: By appointment\
 
 
 ## Course description
