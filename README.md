@@ -2,7 +2,7 @@ Introduction to Quantitative Textual Analysis
 ------
 
 Instructor: Charles Pletcher (@pletcher)\
-TA: Zoë Spriggs\
+TA: Zoë Spriggs (@zspriggs), TA Office Hours: By appointment (cal.com/zspriggs)\
 Meeting time: M 6-9 p.m.\
 Location: Miner Hall 112\
 Office hours: By appointment\
@@ -21,6 +21,10 @@ TODO
 
 - Fix file names with URNs
 
+### General Setup
+It is reccomended that you use Visual Studio Code (https://visualstudio.microsoft.com/downloads/) for this course. Be sure to scroll down and download Visual Studio Code, not Visual Studio. Once installed, navigate to the left side of the screen and hover over the symbols until you find "Extensions" (it looks like 4 building blocks). Please search for and then install the "Jupyter" extension. Windows users should also install the "WSL" extension.
+
+
 ### macOS
 
 
@@ -28,7 +32,17 @@ TODO
 
 
 ### Windows
+Since Windows filenames do not allow the : character and URNs include the :, Windows users will need to use Windows Subsystem for Linux (WSL) to work with this repository. 
 
+If you have not used WSL before, you will need to install it.
+
+1. Open Windows Powershell (this can be done by searching "powershell" in the start menu)
+2. Run the following command: wsl --install
+3. Once the install is complete, open your files and navigate to the folder that you'd like to be working in. 
+4. Right click and select "Open in Terminal"
+5. Once in the terminal, run the following command: wsl
+6. From here, you can clone the class repository by running the following command: git clone https://github.com/Tufts-2024-Quant-Text-Analysis/intro-text-analysis.git
+7. Now, you can open the local version of this repository in Visual Studio Code. 
 
 ## Licenses
 
