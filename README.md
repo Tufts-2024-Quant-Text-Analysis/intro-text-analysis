@@ -19,10 +19,6 @@ This course introduces humanists to the tools and methodologies of quantitative 
 
 ## Setup
 
-TODO
-
-- Fix file names with URNs
-
 ### General Setup
 It is reccomended that you use Visual Studio Code (https://visualstudio.microsoft.com/downloads/) for this course. Be sure to scroll down and download Visual Studio Code, not Visual Studio. Once installed, navigate to the left side of the screen and hover over the symbols until you find "Extensions" (it looks like 4 building blocks). Please search for and then install the "Jupyter" extension. Windows users should also install the "WSL" extension.
 
