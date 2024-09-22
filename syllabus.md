@@ -71,8 +71,8 @@ Readings are to be done *before* class. Labs will be done *in* class, and must b
 | ✅    | Week | Reading Assignment               | Journal Club                               | Lab                         | Homework              |
 | :--- | :--- | :------------------------------- | :----------------------------------------- | :-------------------------- | :-------------------- |
 | ✅    | 1    | None                             | Syllabus Overview                          | [](./week-01/week-01.ipynb) | Finish lab exercises  |
-|      | 2    | Brezina 2018: Ch. 2, pp. 38–41   | Ehrett et al. 2024. "Shakespeare Machine." | [](./week-02/week-02.ipynb) | Reading quiz          |
-|      | 3    | Brezina 2018: Ch. 2, pp. 42–65   | TBD                                        | [](./week-03/week-03.ipynb) | Finish lab            |
+| ✅   | 2    | Brezina 2018: Ch. 2, pp. 38–41   | Ehrett et al. 2024. "Shakespeare Machine." | [](./week-02/week-02.ipynb) | Reading quiz          |
+|      | 3    | Brezina 2018: Ch. 2, pp. 42–65   | Burns. 2019. "Building a textual analysis pipeline..."                                        | [](./week-03/week-03.ipynb) | Finish lab            |
 |      | 4    | Brezina 2018: Ch. 3, pp. 66–75   | TBD                                        | [](./week-04/week-04.ipynb) | Reading quiz          |
 |      | 5    | Brezina 2018: Ch. 3, pp. 76–101  | TBD                                        | [](./week-05/week-05.ipynb) | Finish lab            |
 |      | 6    | Brezina 2018: Ch. 4, pp. 102–117 | TBD                                        | [](./week-06/week-06.ipynb) | Reading quiz          |

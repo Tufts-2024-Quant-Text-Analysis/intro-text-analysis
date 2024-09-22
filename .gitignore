@@ -1,2 +1,4 @@
 .DS_Store
 .venv
+*_submission.ipynb
+__pycache__
