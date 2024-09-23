@@ -1,0 +1,35 @@
+2. 
+The three books of Pausanias that I choose are: book 3, book 5, and book 8, and all in Greek. 
+For book 3: most common token is και with 932 occurance, most common type is και with 932 occurance, and most common 
+lemmatas is Λακεδαιμόνιος with 125 occurance. After removing stop words, the most common token and type is 'ἄγαλμα with 58
+occurance. 
+For book 5: most common token is δε with 1013 occurance, most common type is also δε with 1013 occurance, and most common 
+lemmatas is Ἠλεῖος with 129 occurance. After removing stop words, the most common token and type is 'Ἠλείων with 46 occurance.
+For book 8: most common token is και with 1591 occurance, most common type is και with 1591 occurance, and most common 
+lemmatas is ποιέω with 127 occurance. After removing stop words, the most common token and type is ἱερὸν with 82 occurance.
+3. 
+After looking at the original text, I decide that the data I got from runing these code correspond with the text themselves. 
+First, before removing stop words and non-alphabetic words, the most common words in each piece of text are stop words. The 
+particles such as τον and conjunction and postpositions like δε and αλλα appear pretty common. The particles are seen in 
+front of most of the nouns, thus it has high appearance because it is seen nearly at least once in every sentence. As for
+the conjunctions and postpositions, they help connect parts of sentences together, so it's also seen in nearly every sentence. 
+Thus, it leads to these types of words being the most common token and most common type from the text. 
+However, this is not sufficient in representing the content of the text. The list of most common words are mostly the same
+across from all three books. Knowing the high occurance of these words can imply some features of Ancient Greek grammar, 
+for example, that the particles are used very frequent, but these are usually also universally seen in other languages. 
+Moreover, the goal of this textual analysis is to see some features of the content, and stop words cannot reflect any of 
+these features. Thus, it is important to look at the results after removing stop words and non-alphabetic words. 
+After removing stop words, the list of most common token, type, and lemmatas become very different. From them, we can see
+the difference in the topic of these texts. For example, for book 3 and book 5, the most common word/type found are both
+nouns that are name of men. Since it's the most common token/type, we know that this man must be very important, and probably
+is the main character that this book focuses on. Book 3 must have Lakedaimonios as a really imporant character in the plot, 
+and Eleius in book 5. Similarly, when we have the most common word/type being verb like in book 8, the most common verb is
+ποιέω. This verb must be a very common action that happened in this book, which implies about the plot. In this case, the 
+word ποιέω has rather abstract meaning "to do", which cannot really account for anything about the plot, but if there is a
+word that is an actual physical action, then we will be able to tell what is the main action of the book. Other than these, 
+the most common lemmatas can also suggest a noun that is a common location, which tells us more about this writing. For book
+8, the most common lemmatas is ἱερὸν, meaning "the temple", thus we can tell this book talks about incidents that happened 
+at the temple. 
+In conclusion, from the most common token, type, and lemmatas, after removing stop-words and non-alphabetic words, we get to
+see what is the most repeated word, and from that infer what the plot is about. Especially the Nominative nouns that are names
+of people or place, their high occurance tells us about the setting of the book. 
