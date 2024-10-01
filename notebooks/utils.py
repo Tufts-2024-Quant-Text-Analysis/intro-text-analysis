@@ -8,6 +8,7 @@ def load_pausanias(lang: str = 'grc'):
     with open(f"../tei/tlg0525.tlg001.perseus-{lang}2.xml") as f:
         text = CapitainsCtsText(urn=f"urn:cts:greekLit:tlg0525.tlg001.perseus-{lang}2", resource=f)
 
+    refs = []
     urns = []
     raw_xmls = []
     unannotated_strings = []
@@ -19,12 +20,14 @@ def load_pausanias(lang: str = 'grc'):
         tree = node.export(Mimetypes.PYTHON.ETREE)
         s = etree.tostring(tree, encoding="unicode", method="text")
 
+        refs.append(ref[0])
         urns.append(urn)
         raw_xmls.append(raw_xml)
         unannotated_strings.append(s)
 
 
     d = {
+        "refs": refs,
         "urn": pd.Series(urns, dtype="string"),
         "raw_xml": raw_xmls,
         "unannotated_strings": pd.Series(unannotated_strings, dtype="string")
