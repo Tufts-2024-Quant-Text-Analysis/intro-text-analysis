@@ -68,23 +68,51 @@ With a course as fast-paced as this one, class-time will be focused on addressin
 
 Readings are to be done *before* class. Labs will be done *in* class, and must be finished before the next class.
 
-| x    | Week | Reading Assignment               | Journal Club                                                 | Lab                         | Homework              |
-| :--- | :--- | :------------------------------- | :----------------------------------------------------------- | :-------------------------- | :-------------------- |
-| x    | 1    | None                             | Syllabus Overview                                            | [](./week-01/week-01.ipynb) | Finish lab exercises  |
-| x    | 2    | Brezina 2018: Ch. 2, pp. 38–41   | Ehrett et al. 2024. "Shakespeare Machine."                   | [](./week-02/week-02.ipynb) | Reading quiz          |
-| x    | 3    | Brezina 2018: Ch. 2, pp. 42–65   | Burns. 2019. "Building a textual analysis pipeline..."       | [](./week-03/week-03.ipynb) | Finish lab            |
-|      | 4    | Review of Ch. 2, pp. 42–65       | Sanchez-Marco et al. 2010. "A Diachronic Corpus of Spanish.” | [](./week-03/week-03.ipynb) | Finish lab            |
-|      | 5    | Brezina 2018: Ch. 3, pp. 66–75   | TBD                                                          | [](./week-04/week-04.ipynb) | Reading quiz          |
-|      | 6    | Brezina 2018: Ch. 3, pp. 76–101  | TBD                                                          | [](./week-05/week-05.ipynb) | Finish lab            |
-|      | 7    | Brezina 2018: Ch. 4, pp. 102–117 | TBD                                                          | [](./week-06/week-06.ipynb) | Reading quiz          |
-|      | 8    | Brezina 2018: Ch. 4, pp. 117–138 | TBD                                                          | [](./week-07/week-07.ipynb) | Finish lab            |
-|      | 9    | Brezina 2018: Ch. 5, pp. 139–151 | TBD                                                          | [](./week-08/week-08.ipynb) | Reading quiz          |
-|      | 10   | Brezina 2018: Ch. 5, pp. 151–182 | TBD                                                          | [](./week-09/week-09.ipynb) | Finish lab            |
-|      | 11   | Brezina 2018: Ch. 6, pp. 183–199 | TBD                                                          | [](./week-10/week-10.ipynb) | Reading quiz          |
-|      | 12   | Brezina 2018: Ch. 6, pp. 199–218 | TBD                                                          | [](./week-11/week-11.ipynb) | Finish lab            |
-|      | 13   | Brezina 2018: Ch. 7, pp. 219–235 | TBD                                                          | [](./week-12/week-12.ipynb) | Work on final project |
-|      | ??   | Brezina 2018: Ch. 7, pp. 235–256 | TBD                                                          | [](./week-13/week-13.ipynb) | Work on final project |
+| x    | Week | Reading Assignment               | Journal Club                               | Lab                         | Homework                          |
+| :--- | :--- | :------------------------------- | :----------------------------------------- | :-------------------------- | :-------------------------------- |
+| x    | 1    | None                             | Syllabus Overview                          | [](./week-01/week-01.ipynb) | Finish lab exercises              |
+| x    | 2    | Brezina 2018: Ch. 2, pp. 38–41   | Ehrett et al. 2024. "Shakespeare Machine." | [](./week-02/week-02.ipynb) | Reading quiz                      |
+| x    | 3    | Brezina 2018: Ch. 2, pp. 42–65   | Burns. 2019. "Text Pipeline"               | [](./week-03/week-03.ipynb) | Finish lab                        |
+|      | 4    | Review of Ch. 2, pp. 42–65       | Sanchez-Marco et al. 2010.                 | [](./week-03/week-03.ipynb) | [Dispersion lab](#dispersion-lab) |
+|      | 5    | Brezina 2018: Ch. 3, pp. 66–75   | TBD                                        | [](./week-04/week-04.ipynb) | Reading quiz                      |
+|      | 6    | Brezina 2018: Ch. 3, pp. 76–101  | TBD                                        | [](./week-05/week-05.ipynb) | Finish lab                        |
+|      | 7    | Brezina 2018: Ch. 4, pp. 102–117 | TBD                                        | [](./week-06/week-06.ipynb) | Reading quiz                      |
+|      | 8    | Brezina 2018: Ch. 4, pp. 117–138 | TBD                                        | [](./week-07/week-07.ipynb) | Finish lab                        |
+|      | 9    | Brezina 2018: Ch. 5, pp. 139–151 | TBD                                        | [](./week-08/week-08.ipynb) | Reading quiz                      |
+|      | 10   | Brezina 2018: Ch. 5, pp. 151–182 | TBD                                        | [](./week-09/week-09.ipynb) | Finish lab                        |
+|      | 11   | Brezina 2018: Ch. 6, pp. 183–199 | TBD                                        | [](./week-10/week-10.ipynb) | Reading quiz                      |
+|      | 12   | Brezina 2018: Ch. 6, pp. 199–218 | TBD                                        | [](./week-11/week-11.ipynb) | Finish lab                        |
+|      | 13   | Brezina 2018: Ch. 7, pp. 219–235 | TBD                                        | [](./week-12/week-12.ipynb) | Work on final project             |
+|      | ??   | Brezina 2018: Ch. 7, pp. 235–256 | TBD                                        | [](./week-13/week-13.ipynb) | Work on final project             |
 
+
+## Labs
+
+### Dispersion Lab
+
+For this lab, you'll want to use a Colab [notebook](https://colab.research.google.com) or a new repository on [GitHub](https://github.com/).
+
+Your assignment is to calculate and visualize dispersion measures for a small corpus, consisting of Pausanias and one or more other texts.
+
+You might start by identifying interesting lemmata, such as most frequent words (after removing stop words), hapaxes, etc. You can even identify clusters of words based on your own semantic understanding, if you wish.
+
+> Remember, you'll want to report absolute and relative frequencies for the tokens, types, and lemmata in the works in your corpus.
+
+You'll then want to calculate different dispersion measures. Start with Range<sub>2</sub> to get a sense of what you're up against.
+
+You should also consider reporting Juilland's _D_, Deviation of Proportions (DP) and Average Reduced Frequency (ARF) or other members of dispersion, depending on your hypotheses and the information that you are hoping to find.
+
+> Remember to consider the tradeoffs associated with each statistic.
+
+Finally, report on the basic lexical diversity of your corpus --- and the parts of your corpus --- using TTR, STTR, and/or MATTR.
+
+If you need help designing experiments, the Exercises in @Brezina2018 ch. 2 (§2.8, p. 62–64) might provide helpful guidance.
+
+#### Submission instructions
+
+Please upload your lab notebook or include a link to it on Canvas.
+
+You should also write a short (4–6-page) report of your findings. Detail your methods and hypotheses, and try to include at least one visualization. (You can use Excel or matplotlib or something similar.)
 
 
 ## Bibliography
