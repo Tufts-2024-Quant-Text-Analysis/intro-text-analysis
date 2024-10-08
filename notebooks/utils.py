@@ -1,12 +1,60 @@
-def load_pausanias(lang: str = 'grc'):
-    from MyCapytain.resources.texts.local.capitains.cts import CapitainsCtsText
-    from MyCapytain.common.constants import Mimetypes
-    from lxml import etree
+from MyCapytain.resources.texts.local.capitains.cts import CapitainsCtsText
+from MyCapytain.common.constants import Mimetypes
+from lxml import etree
+from pathlib import Path
 
-    import pandas as pd
+import pandas as pd
+import spacy
 
-    with open(f"../tei/tlg0525.tlg001.perseus-{lang}2.xml") as f:
-        text = CapitainsCtsText(urn=f"urn:cts:greekLit:tlg0525.tlg001.perseus-{lang}2", resource=f)
+# enable copy-on-write so that we can turn a slice into a new DataFrame
+pd.options.mode.copy_on_write = True
+
+# class TextStats:
+#     def __init__(self, filepath: str | Path, urn: str, *args, **kwargs):
+#         data = self.prepare_data(filepath, urn)
+
+#         self.df = pd.DataFrame(data, *args, **kwargs)
+#         self.lang = urn.split("-")[-1][0:-1]
+
+#         self.tokenize_df(self.lang)
+
+#     def tokenize_df(self, lang: str = 'grc'):
+#         model = "grc_proiel_sm" if lang == "grc" else "en_core_web_sm"
+
+#         nlp = spacy.load(model, disable=["ner"])
+
+#         self.df["tokens"] = self.df["unannotated_strings"].apply(nlp.tokenizer)
+
+#         raw_texts = [t for t in self.df["unannotated_strings"]]
+#         annotated_texts = nlp.pipe(raw_texts, batch_size=100)
+
+#         self.df["nlp_docs"] = list(annotated_texts)
+
+
+def load_pausanias(lang: str = "grc"):
+    urn = f"urn:cts:greekLit:tlg0525.tlg001.perseus-{lang}2"
+    file = Path(f"../tei/tlg0525.tlg001.perseus-{lang}2.pickle")
+
+    df = None
+    if file.exists(): 
+        df = pd.read_pickle(file)
+    else:
+        data = prepare_data(f"../tei/tlg0525.tlg001.perseus-{lang}2.xml", urn)
+
+        df = pd.DataFrame(data)
+
+        df.to_pickle(file)
+
+    return tokenize(df, lang)
+
+
+def get_book(df: pd.DataFrame, n: int | str):
+    return df[df["refs"].str.startswith(f"{n}")]
+
+
+def prepare_data(filepath, urn):
+    with open(filepath) as f:
+        text = CapitainsCtsText(urn=urn, resource=f)
 
     refs = []
     urns = []
@@ -25,29 +73,23 @@ def load_pausanias(lang: str = 'grc'):
         raw_xmls.append(raw_xml)
         unannotated_strings.append(s)
 
-
-    d = {
+    return {
         "refs": refs,
         "urn": pd.Series(urns, dtype="string"),
         "raw_xml": raw_xmls,
-        "unannotated_strings": pd.Series(unannotated_strings, dtype="string")
+        "unannotated_strings": pd.Series(unannotated_strings, dtype="string"),
     }
-    pausanias_df = pd.DataFrame(d)
-    
-    return tokenize(pausanias_df, lang)
 
-def tokenize(df, lang: str = 'grc'):
-    import spacy
-
-    model = "grc_proiel_sm" if lang == 'grc' else "en_core_web_sm"
+def tokenize(df: pd.DataFrame, lang: str = "grc"):
+    model = "grc_proiel_sm" if lang == "grc" else "en_core_web_sm"
 
     nlp = spacy.load(model, disable=["ner"])
 
-    df['tokens'] = df['unannotated_strings'].apply(nlp.tokenizer)
+    df["tokens"] = df["unannotated_strings"].apply(nlp.tokenizer)
 
-    raw_texts = [t for t in df['unannotated_strings']]
+    raw_texts = [t for t in df["unannotated_strings"]]
     annotated_texts = nlp.pipe(raw_texts, batch_size=100)
 
-    df['nlp_docs'] = list(annotated_texts)
+    df["nlp_docs"] = list(annotated_texts)
 
     return df
