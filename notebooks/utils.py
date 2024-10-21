@@ -9,26 +9,27 @@ import spacy
 # enable copy-on-write so that we can turn a slice into a new DataFrame
 pd.options.mode.copy_on_write = True
 
-# class TextStats:
-#     def __init__(self, filepath: str | Path, urn: str, *args, **kwargs):
-#         data = self.prepare_data(filepath, urn)
 
-#         self.df = pd.DataFrame(data, *args, **kwargs)
-#         self.lang = urn.split("-")[-1][0:-1]
+def count_grc_dependency_collocations(x, w1, w2):
+    w2_is_child_of_w1 = len(
+        [t for t in x if t.lemma_ == w1 and w2 in [tt.lemma_ for tt in t.children]]
+    )
 
-#         self.tokenize_df(self.lang)
+    return w2_is_child_of_w1
 
-#     def tokenize_df(self, lang: str = 'grc'):
-#         model = "grc_proiel_sm" if lang == "grc" else "en_core_web_sm"
 
-#         nlp = spacy.load(model, disable=["ner"])
+def count_ngram_collocations(x, w1, w2, l_size: int = 1, r_size: int = 1):
+    lemmata = [t.lemma_ for t in x]
 
-#         self.df["tokens"] = self.df["unannotated_strings"].apply(nlp.tokenizer)
+    # the right-hand side of a slice in Python is exclusive, so we add 1 to make sure
+    # we're actually getting one element to the right
+    chunked_lemmata = [
+        lemmata[i - l_size : i + r_size + 1] for i in range(0, len(lemmata))
+    ]
 
-#         raw_texts = [t for t in self.df["unannotated_strings"]]
-#         annotated_texts = nlp.pipe(raw_texts, batch_size=100)
+    cooccurrences = [1 for l in chunked_lemmata if w1 in l and w2 in l]
 
-#         self.df["nlp_docs"] = list(annotated_texts)
+    return sum(cooccurrences)
 
 
 def load_pausanias(lang: str = "grc"):
@@ -36,7 +37,7 @@ def load_pausanias(lang: str = "grc"):
     file = Path(f"../tei/tlg0525.tlg001.perseus-{lang}2.pickle")
 
     df = None
-    if file.exists(): 
+    if file.exists():
         df = pd.read_pickle(file)
     else:
         data = prepare_data(f"../tei/tlg0525.tlg001.perseus-{lang}2.xml", urn)
@@ -79,6 +80,7 @@ def prepare_data(filepath, urn):
         "raw_xml": raw_xmls,
         "unannotated_strings": pd.Series(unannotated_strings, dtype="string"),
     }
+
 
 def tokenize(df: pd.DataFrame, lang: str = "grc"):
     model = "grc_proiel_sm" if lang == "grc" else "en_core_web_sm"
