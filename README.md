@@ -25,6 +25,7 @@ It is reccomended that you use Visual Studio Code (https://visualstudio.microsof
 
 ### macOS
 
+1. Fork the repository.
 
 ### Linux
 
