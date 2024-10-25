@@ -21,6 +21,7 @@ def count_grc_dependency_collocations(x, w1, w2):
 def count_ngram_collocations(x, w1, w2, l_size: int = 1, r_size: int = 1):
     lemmata = [t.lemma_ for t in x]
 
+    # NB: There is currently a bug in this code
     # the right-hand side of a slice in Python is exclusive, so we add 1 to make sure
     # we're actually getting one element to the right
     chunked_lemmata = [
@@ -48,6 +49,20 @@ def load_pausanias(lang: str = "grc"):
 
     return tokenize(df, lang)
 
+
+def load_iliad():
+    urn = "urn:cts:greekLit:tlg0012.tlg001.perseus-eng3"
+    file = Path("../tei/tlg0012.tlg001.perseus-eng3.pickle")
+
+    df = None
+    if file.exists():
+        df = pd.read_pickle(file)
+    else:
+        data = prepare_data("../tei/tlg0012.tlg001.perseus-eng3.xml", urn)
+        df = pd.DataFrame(data)
+        df.to_pickle(file)
+    
+    return tokenize(df, "eng")
 
 def get_book(df: pd.DataFrame, n: int | str):
     return df[df["refs"].str.startswith(f"{n}")]
@@ -83,7 +98,7 @@ def prepare_data(filepath, urn):
 
 
 def tokenize(df: pd.DataFrame, lang: str = "grc"):
-    model = "grc_proiel_sm" if lang == "grc" else "en_core_web_sm"
+    model = "grc_proiel_trf" if lang == "grc" else "en_core_web_sm"
 
     nlp = spacy.load(model, disable=["ner"])
 
