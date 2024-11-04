@@ -76,14 +76,6 @@ Readings are to be done *before* class. Labs will be done *in* class, and must b
 | x    | 4    | Review of Ch. 2, pp. 42–65 | Sanchez-Marco et al. 2010.                 | [Dispersion lab](#dispersion-lab) |
 | x    | 5    | Brezina Ch. 3, pp. 66–75   | TBD                                        | Reading quiz                      |
 | x    | 6    | Brezina Ch. 3, pp. 76–101  | TBD                                        | Finish lab                        |
-|      | 7    | Brezina Ch. 4, pp. 102–117 | TBD                                        | Reading quiz                      |
-|      | 8    | Brezina Ch. 4, pp. 117–138 | TBD                                        | Finish lab                        |
-|      | 9    | Brezina Ch. 5, pp. 139–151 | TBD                                        | Reading quiz                      |
-|      | 10   | Brezina Ch. 5, pp. 151–182 | TBD                                        | Finish lab                        |
-|      | 11   | Brezina Ch. 6, pp. 183–199 | TBD                                        | Reading quiz                      |
-|      | 12   | Brezina Ch. 6, pp. 199–218 | TBD                                        | Finish lab                        |
-|      | 13   | Brezina Ch. 7, pp. 219–235 | TBD                                        | Work on final project             |
-|      | ??   | Brezina Ch. 7, pp. 235–256 | TBD                                        | Work on final project             |
 
 
 ### Week 7 (November 4, 2024)
