@@ -35,13 +35,15 @@ def count_ngram_collocations(x, w1, w2, l_size: int = 1, r_size: int = 1):
 
 def load_pausanias(lang: str = "grc"):
     urn = f"urn:cts:greekLit:tlg0525.tlg001.perseus-{lang}2"
-    file = Path(f"../tei/tlg0525.tlg001.perseus-{lang}2.pickle")
+    print("hello")
+    file = Path(f"./tei/tlg0525.tlg001.perseus-{lang}2.pickle")
 
     df = None
     if file.exists():
         df = pd.read_pickle(file)
-    else:
-        data = prepare_data(f"../tei/tlg0525.tlg001.perseus-{lang}2.xml", urn)
+    else: #tei/tlg0525.tlg001.perseus-grc2.xml
+        print("vvv this line hates meeee whyyyyyyyyyyyyyy")
+        data = prepare_data(f"./tei/tlg0525.tlg001.perseus-{lang}2.xml", urn)
 
         df = pd.DataFrame(data)
 
@@ -110,3 +112,5 @@ def tokenize(df: pd.DataFrame, lang: str = "grc"):
     df["nlp_docs"] = list(annotated_texts)
 
     return df
+
+pausanias_df = load_pausanias('grc') # you can use `load_pausanias('eng')` to load the English version
