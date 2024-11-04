@@ -68,23 +68,57 @@ With a course as fast-paced as this one, class-time will be focused on addressin
 
 Readings are to be done *before* class. Labs will be done *in* class, and must be finished before the next class.
 
-| x    | Week | Reading Assignment               | Journal Club                               | Lab                         | Homework                          |
-| :--- | :--- | :------------------------------- | :----------------------------------------- | :-------------------------- | :-------------------------------- |
-| x    | 1    | None                             | Syllabus Overview                          | [](./week-01/week-01.ipynb) | Finish lab exercises              |
-| x    | 2    | Brezina 2018: Ch. 2, pp. 38–41   | Ehrett et al. 2024. "Shakespeare Machine." | [](./week-02/week-02.ipynb) | Reading quiz                      |
-| x    | 3    | Brezina 2018: Ch. 2, pp. 42–65   | Burns. 2019. "Text Pipeline"               | [](./week-03/week-03.ipynb) | Finish lab                        |
-|      | 4    | Review of Ch. 2, pp. 42–65       | Sanchez-Marco et al. 2010.                 | [](./week-03/week-03.ipynb) | [Dispersion lab](#dispersion-lab) |
-|      | 5    | Brezina 2018: Ch. 3, pp. 66–75   | TBD                                        | [](./week-04/week-04.ipynb) | Reading quiz                      |
-|      | 6    | Brezina 2018: Ch. 3, pp. 76–101  | TBD                                        | [](./week-05/week-05.ipynb) | Finish lab                        |
-|      | 7    | Brezina 2018: Ch. 4, pp. 102–117 | TBD                                        | [](./week-06/week-06.ipynb) | Reading quiz                      |
-|      | 8    | Brezina 2018: Ch. 4, pp. 117–138 | TBD                                        | [](./week-07/week-07.ipynb) | Finish lab                        |
-|      | 9    | Brezina 2018: Ch. 5, pp. 139–151 | TBD                                        | [](./week-08/week-08.ipynb) | Reading quiz                      |
-|      | 10   | Brezina 2018: Ch. 5, pp. 151–182 | TBD                                        | [](./week-09/week-09.ipynb) | Finish lab                        |
-|      | 11   | Brezina 2018: Ch. 6, pp. 183–199 | TBD                                        | [](./week-10/week-10.ipynb) | Reading quiz                      |
-|      | 12   | Brezina 2018: Ch. 6, pp. 199–218 | TBD                                        | [](./week-11/week-11.ipynb) | Finish lab                        |
-|      | 13   | Brezina 2018: Ch. 7, pp. 219–235 | TBD                                        | [](./week-12/week-12.ipynb) | Work on final project             |
-|      | ??   | Brezina 2018: Ch. 7, pp. 235–256 | TBD                                        | [](./week-13/week-13.ipynb) | Work on final project             |
+| x    | Week | Reading Assignment         | Journal Club                               | Homework                          |
+| :--- | :--- | :------------------------- | :----------------------------------------- | :-------------------------------- |
+| x    | 1    | None                       | Syllabus Overview                          | Finish lab exercises              |
+| x    | 2    | Brezina Ch. 2, pp. 38–41   | Ehrett et al. 2024. "Shakespeare Machine." | Reading quiz                      |
+| x    | 3    | Brezina Ch. 2, pp. 42–65   | Burns. 2019. "Text Pipeline"               | Finish lab                        |
+| x    | 4    | Review of Ch. 2, pp. 42–65 | Sanchez-Marco et al. 2010.                 | [Dispersion lab](#dispersion-lab) |
+| x    | 5    | Brezina Ch. 3, pp. 66–75   | TBD                                        | Reading quiz                      |
+| x    | 6    | Brezina Ch. 3, pp. 76–101  | TBD                                        | Finish lab                        |
 
+
+### Week 7 (November 4, 2024)
+
+November 4: Building a corpus from TEI XML; word embeddings 
+(https://www.tensorflow.org/text/guide/word_embeddings#create_a_classification_model) 
+and Word2Vec (https://www.tensorflow.org/text/tutorials/word2vec)
+
+HW: Finish word2vec lab, build and evaluate initial corpus
+
+### Week 8 (November **12**, 2024)
+
+November 18: Brezina ch. 5 (correlation measures); 
+text classification (https://www.tensorflow.org/tutorials/keras/text_classification, 
+https://www.tensorflow.org/text/tutorials/classify_text_with_bert)
+
+HW: Finish text classification with BERT lab; 
+fine-tuning lab (https://www.tensorflow.org/text/tutorials/bert_glue or 
+for Greek: https://huggingface.co/bowphs/GreBerta); 
+finalize corpora for final projects
+
+### Week 9 (November 18, 2024)
+
+November 25: Brezina ch. 7 (change over time), 
+semantic similarity (https://www.tensorflow.org/hub/tutorials/semantic_similarity_with_tf_hub_universal_encoder)
+
+
+HW: Finish in-class lab, work on final projects
+
+
+### Week 10 (November 25, 2024)
+
+Independent work on final projects; additional labs/catch-up as needed
+
+
+### Week 11 (December 2, 2024)
+
+Independent work on final projects; additional labs/catch-up as needed
+
+
+### Week 12 (December 9, 2024)
+
+Final project presentations
 
 ## Labs
 
